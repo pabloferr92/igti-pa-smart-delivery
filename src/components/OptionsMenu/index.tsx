@@ -8,11 +8,22 @@ import WineIcon from '../../assets/icons/wine.svg';
 import JuiceIcon from '../../assets/icons/juice.svg';
 import OthersIcon from '../../assets/icons/others.svg';
 import ChipsIcon from '../../assets/icons/chips.svg';
+import { useNavigation } from '@react-navigation/native';
 
 export function OptionsMenu(): JSX.Element {
+  type Nativation = {
+    navigate: (screen: string, params: any) => void;
+  };
+
+  const { navigate } = useNavigation<Nativation>();
+
   return (
     <Container>
-      <OptionButton>
+      <OptionButton
+        onPress={() => {
+          navigate('ProductBrandList', {});
+        }}
+      >
         <BeerIcon width={25} height={25} />
         <OptionButtonText>Cervejas</OptionButtonText>
       </OptionButton>

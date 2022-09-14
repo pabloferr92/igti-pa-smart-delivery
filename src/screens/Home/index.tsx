@@ -7,7 +7,12 @@ import Animated, {
 import { ActivityIndicator } from 'react-native';
 
 import { useTheme } from 'styled-components';
-import { Container, LoadingContainer } from './styles';
+import {
+  Container,
+  LoadingContainer,
+  AddToCartButton,
+  AddToCartButtonText,
+} from './styles';
 
 import { Header } from '../../components/Header';
 import { HighlightsBanner } from '../../components/HighlightsBanner';
@@ -18,6 +23,8 @@ import { Product } from '../../components/ProductCard';
 import bannerImages from '../../utils/banners';
 
 import api from '../../services/api';
+import { useCartContext } from '../../context/cartContext';
+import { GoToCartButton } from '../../components/GoToCartButton';
 
 export interface ResponseObject {
   id: string;
@@ -29,6 +36,8 @@ export interface ResponseObject {
 export function Home(): JSX.Element {
   const [optionsList, setOptionsList] = useState<OptionsListProps[]>([]);
   const [loading, setLoading] = useState(false);
+
+  const { cartItems } = useCartContext();
 
   const theme = useTheme();
 
@@ -91,6 +100,7 @@ export function Home(): JSX.Element {
           ))}
         </Animated.ScrollView>
       )}
+      {cartItems.length > 0 && <GoToCartButton></GoToCartButton>}
     </Container>
   );
 }

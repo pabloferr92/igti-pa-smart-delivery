@@ -7,9 +7,9 @@
       "products": [
         {
           "id": "1",
-          "description": "Brahma Duplo Malte 350ml",
-          "image": "https://courier-images-prod.imgix.net/produc_variant/00010266_993f6927-e697-4dca-b4e6-e118d99be4c8.jpg?auto=compress,format&fit=max&w=undefined&h=200&dpr=2",
-          "price": 2.99,
+          "description": "Heineken 350ml",
+          "image": "https://d2r9epyceweg5n.cloudfront.net/stores/001/043/122/products/cerveja-heineken-lata-350-ml1-157b2e5b56d0a3b51c15676907824683-640-0.jpg",
+          "price": 5.0,
           "cold": true,
           "discount": 0
         },
@@ -281,6 +281,29 @@
           "discount": 0
         }
       ]
+    }
+  ],
+  "brands": [
+    {
+      "marca_id": 1,
+      "marca_name": "Heineken",
+      "marca_description": "Desde 1810",
+      "marca_category": "Cerveja",
+      "image": "https://firebasestorage.googleapis.com/v0/b/delivery-app-e4dc1.appspot.com/o/brand-images%2Fheineken.jpg?alt=media&token=b978c064-106b-497e-87a8-1213f0b57266"
+    },
+    {
+      "marca_id": 2,
+      "marca_name": "Brahma",
+      "marca_description": "Desde 1810",
+      "marca_category": "Cerveja",
+      "imagem": "https://firebasestorage.googleapis.com/v0/b/delivery-app-e4dc1.appspot.com/o/brand-images%2Fbrahma.jpg?alt=media&token=0da4cbf2-33d5-47a6-9dac-e6fb9fba418f"
+    },
+    {
+      "marca_id": 3,
+      "marca_name": "Skol",
+      "marca_description": "Desde 1810",
+      "marca_category": "Cerveja",
+      "image": "https://firebasestorage.googleapis.com/v0/b/delivery-app-e4dc1.appspot.com/o/brand-images%2Fskol-sec.jpg?alt=media&token=53336754-2891-4d79-bf54-5e6d979fd64f"
     }
   ]
 }

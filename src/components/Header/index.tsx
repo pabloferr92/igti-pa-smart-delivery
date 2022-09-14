@@ -60,7 +60,7 @@ export function Header({ scrollInYAnimation }: HeaderProps): JSX.Element {
     backgroundColor: interpolateColor(
       scrollInYAnimation.value,
       [0, HEIGHT],
-      ['#1A1A1A', 'rgba(0, 0, 0, 0.01)'],
+      [theme.colors.header, 'rgba(0, 0, 0, 0.01)'],
     ),
   }));
 
@@ -68,7 +68,11 @@ export function Header({ scrollInYAnimation }: HeaderProps): JSX.Element {
     <Container style={animatedHeaderStyle}>
       <Content>
         <UserAvatarContainer>
-          <UserAvatar source={{ uri: 'https://github.com/rennand.png' }} />
+          <UserAvatar
+            source={{
+              uri: 'https://avatars.githubusercontent.com/u/36247444?v=4',
+            }}
+          />
           <UserProfileButton>
             <MaterialCommunityIcons
               name="menu"
@@ -82,7 +86,7 @@ export function Header({ scrollInYAnimation }: HeaderProps): JSX.Element {
           <UserAddressContainer>
             <UserAddressMessage>Receber agora em</UserAddressMessage>
             <UserAddress numberOfLines={1}>
-              Rua beco da paz, 2096 Piçarreira, Teresina
+              Rua João Lourenço de Araújo, 350, Casa 3
             </UserAddress>
           </UserAddressContainer>
           <MaterialCommunityIcons

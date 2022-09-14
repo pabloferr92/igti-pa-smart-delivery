@@ -8,12 +8,15 @@ import { ThemeProvider } from 'styled-components';
 import Routes from './src/routes';
 
 import theme from './src/styles/theme';
+import CartProvider from './src/context/cartContext';
 
 export default function App(): JSX.Element {
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar barStyle="light-content" backgroundColor="#1A1A1A" />
-      <Routes />
+      <CartProvider>
+        <StatusBar barStyle="light-content" backgroundColor="#1A1A1A" />
+        <Routes />
+      </CartProvider>
     </ThemeProvider>
   );
 }

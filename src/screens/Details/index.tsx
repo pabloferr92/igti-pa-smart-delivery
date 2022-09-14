@@ -1,6 +1,7 @@
 import { Feather } from '@expo/vector-icons';
 import React, { useState, useMemo } from 'react';
 import { useTheme } from 'styled-components';
+import { useCartContext } from '../../context/cartContext';
 
 import { useNavigation, useRoute } from '@react-navigation/native';
 import {
@@ -34,10 +35,17 @@ type RouteParams = {
   product: Product;
 };
 
+type Nativation = {
+  navigate: (screen: string, params: any) => void;
+};
+
 export function Details(): JSX.Element {
   const route = useRoute();
   const { product } = route.params as RouteParams;
   const { goBack } = useNavigation();
+
+  const { addICartItem, removeCartItem, verifyIfContainsCartItem, cartItems } =
+    useCartContext();
 
   const [quantity, setQuantity] = useState(1);
   const [price] = useState(() => {
@@ -46,6 +54,12 @@ export function Details(): JSX.Element {
     }
     return product.price;
   });
+
+  const { navigate } = useNavigation<Nativation>();
+
+  function handleShowProductDetail() {
+    navigate('Details', { product });
+  }
 
   const theme = useTheme();
 
@@ -57,16 +71,24 @@ export function Details(): JSX.Element {
   const totalPrice = useMemo(() => {
     const totalPriceAmount = quantity * price;
 
-    return Intl.NumberFormat('pt-BR', {
-      currency: 'BRL',
-      style: 'currency',
-    }).format(totalPriceAmount);
+    return totalPriceAmount;
   }, [quantity, price]);
 
   function handleAddProductAmount(amount: number) {
     if (amount < 0 && quantity === 1) return;
 
     setQuantity(oldState => oldState + amount);
+  }
+
+  function handleAddToCart() {
+    addICartItem({
+      product: product,
+      quantity: quantity,
+      total_price: totalPrice,
+    });
+    navigate('CartItens', {});
+
+    console.log('executando add to cart ' + JSON.stringify(cartItems));
   }
 
   return (
@@ -133,9 +155,13 @@ export function Details(): JSX.Element {
           </AddManyProductsButton>
         </AddManyProductsContainer>
 
-        <AddToCartButton>
+        <AddToCartButton
+          onPress={() => {
+            handleAddToCart();
+          }}
+        >
           <AddToCartButtonText>ADICIONAR ({quantity})</AddToCartButtonText>
-          <AddToCartButtonText>{totalPrice}</AddToCartButtonText>
+          <AddToCartButtonText>R$ {totalPrice.toFixed(2)}</AddToCartButtonText>
         </AddToCartButton>
       </CheckoutContainer>
     </Container>

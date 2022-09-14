@@ -16,6 +16,7 @@ export const Header = styled.View`
   padding-top: ${Platform.OS === 'ios' ? getStatusBarHeight() + 15 : 15}px;
   justify-content: space-between;
   /* margin-bottom: 10px; */
+  background-color: #ffff;
 `;
 
 export const BackButton = styled.TouchableOpacity``;
