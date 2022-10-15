@@ -9,11 +9,12 @@ import ICart from '../interfaces/cart';
 
 interface ICartContext {
   cartItems: ICart[];
-  totalPrice: number;
+  totalPrice: Number;
   addICartItem: (value: ICart) => void;
   removeCartItem: (value: ICart) => void;
   verifyIfContainsCartItem: (value: ICart) => boolean;
-  getCartItens: () => null;
+  //getCartItens: () => null;
+  releaseCart: () => void;
 }
 
 const defaultState = {
@@ -21,8 +22,9 @@ const defaultState = {
   totalPrice: 0,
   addICartItem: () => null,
   removeCartItem: () => null,
+  releaseCart: () => null,
   verifyIfContainsCartItem: () => false,
-  getCartItens: () => null,
+  //getCartItens: () => null,
 };
 
 const CartContext = createContext<ICartContext>(defaultState);
@@ -46,6 +48,12 @@ const CartProvider: FC = ({ children }) => {
     setCartItems(newItems);
   };
 
+  const releaseCart = () => {
+    console.log('Executando reelease');
+    setCartItems([]);
+    setTotalPrice(0);
+  };
+
   const verifyIfContainsCartItem = (value: ICart) => {
     const index = cartItems.indexOf(value);
     if (index > -1) {
@@ -55,7 +63,6 @@ const CartProvider: FC = ({ children }) => {
   };
 
   useEffect(() => {
-    console.log('Cart itens foi atualizado, effect executando');
     cartItems.forEach(element => {
       setTotalPrice(totalPrice + element.total_price);
     });
@@ -69,6 +76,7 @@ const CartProvider: FC = ({ children }) => {
         addICartItem,
         removeCartItem,
         verifyIfContainsCartItem,
+        releaseCart,
       }}
     >
       {children}

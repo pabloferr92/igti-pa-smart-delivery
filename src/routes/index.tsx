@@ -7,6 +7,8 @@ import { Home } from '../screens/Home';
 import { Details } from '../screens/Details';
 import { CartItens } from '../screens/CartItens';
 import { ProductBrandList } from '../screens/ProductBrandList';
+import { ProductList } from '../screens/ProductList';
+import { MyOrders } from '../screens/MyOrders';
 
 const { Screen, Navigator } = createStackNavigator();
 
@@ -22,6 +24,8 @@ export function Routes(): JSX.Element {
         <Screen name="Details" component={Details} />
         <Screen name="CartItens" component={CartItens} />
         <Screen name="ProductBrandList" component={ProductBrandList} />
+        <Screen name="ProductList" component={ProductList} />
+        <Screen name="MyOrders" component={MyOrders} />
       </Navigator>
     </NavigationContainer>
   );

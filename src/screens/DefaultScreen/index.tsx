@@ -9,7 +9,7 @@ import Animated, {
 import { ActivityIndicator } from 'react-native';
 
 type Props = {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
 };
 
 export function DefaultScreen({ children }: Props): JSX.Element {

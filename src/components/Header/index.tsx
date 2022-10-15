@@ -23,6 +23,7 @@ import {
   Content,
 } from './styles';
 import { SearchInput } from '../SearchInput';
+import { MainMenu } from '../MainMenu';
 
 type HeaderProps = {
   scrollInYAnimation: Animated.SharedValue<number>;
@@ -74,11 +75,12 @@ export function Header({ scrollInYAnimation }: HeaderProps): JSX.Element {
             }}
           />
           <UserProfileButton>
-            <MaterialCommunityIcons
+            {/* <MaterialCommunityIcons
               name="menu"
-              size={10}
+              size={15}
               color={theme.colors.text}
-            />
+            /> */}
+            <MainMenu></MainMenu>
           </UserProfileButton>
         </UserAvatarContainer>
 
@@ -86,7 +88,7 @@ export function Header({ scrollInYAnimation }: HeaderProps): JSX.Element {
           <UserAddressContainer>
             <UserAddressMessage>Receber agora em</UserAddressMessage>
             <UserAddress numberOfLines={1}>
-              Rua João Lourenço de Araújo, 350, Casa 3
+              Avenida das nações unidas, 1234, São Paulo - Sp.
             </UserAddress>
           </UserAddressContainer>
           <MaterialCommunityIcons

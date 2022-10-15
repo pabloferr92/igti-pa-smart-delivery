@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 
 import { useNavigation } from '@react-navigation/native';
 
-import { Container, ProductInfo, BrandImage, shadowStyle } from './styles';
+import { Container, BrandImage, shadowStyle, DescriptionText } from './styles';
 import IBrand from '../../interfaces/brands';
-import api from '../../services/api';
+import { Alert } from 'react-native';
 
 type BrandCardProps = {
   brand: IBrand;
@@ -14,20 +14,23 @@ type Nativation = {
   navigate: (screen: string, params: any) => void;
 };
 
-export function ProductCard({ brand }: BrandCardProps): JSX.Element {
+export function BrandCard({ brand }: BrandCardProps): JSX.Element {
   const { navigate } = useNavigation<Nativation>();
 
-  function handleShowBrandDetail() {
-    navigate('Details', { brand });
+  function handleShowProductListByBrand() {
+    console.log('Indo para lista por marca');
+    navigate('ProductList', brand);
   }
 
   return (
     <Container
       style={shadowStyle}
-      activeOpacity={0.7}
-      onPress={handleShowBrandDetail}
+      onPress={() => {
+        handleShowProductListByBrand();
+      }}
     >
       <BrandImage source={{ uri: brand.image }} />
+      <DescriptionText>{brand.description + ' teste'}</DescriptionText>
     </Container>
   );
 }

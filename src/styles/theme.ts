@@ -1,7 +1,7 @@
 export default {
   colors: {
-    primary: '#F5C91E',
-    header: '#1A1A1A',
+    primary: '#ffba6b',
+    header: '#ff6543',
     shape: '#FFFFFF',
     background: '#F4F4F4',
     section_title: '#9B9B9B',

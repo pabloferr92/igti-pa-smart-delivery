@@ -31,8 +31,8 @@ export const UserAvatarContainer = styled.View`
 `;
 
 export const UserProfileButton = styled(RectButton)`
-  height: 18px;
-  width: 18px;
+  height: 25px;
+  width: 25px;
 
   align-items: center;
   justify-content: center;

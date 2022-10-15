@@ -87,8 +87,6 @@ export function Details(): JSX.Element {
       total_price: totalPrice,
     });
     navigate('CartItens', {});
-
-    console.log('executando add to cart ' + JSON.stringify(cartItems));
   }
 
   return (

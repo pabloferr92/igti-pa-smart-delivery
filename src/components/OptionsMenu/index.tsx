@@ -45,12 +45,12 @@ export function OptionsMenu(): JSX.Element {
 
       <OptionButton>
         <OthersIcon width={25} height={25} />
-        <OptionButtonText>Lojinha</OptionButtonText>
+        <OptionButtonText>Diversos</OptionButtonText>
       </OptionButton>
 
       <OptionButton>
         <ChipsIcon width={25} height={25} />
-        <OptionButtonText>Comidinhas</OptionButtonText>
+        <OptionButtonText>Salgadinhos</OptionButtonText>
       </OptionButton>
     </Container>
   );

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from 'styled-components';
-
 import { useNavigation, useRoute } from '@react-navigation/native';
 import {
   Header,
@@ -10,28 +9,35 @@ import {
   LoadingContainer,
   LoadgingText,
 } from './styles';
-import { Text } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { DefaultScreen } from '../DefaultScreen';
 import api from '../../services/api';
 import IBrand from '../../interfaces/brands';
-import { BrandCard } from '../../components/BrandCard';
 import { FlatList, Heading, HStack, Spinner } from 'native-base';
+import { ProductCard } from '../../components/ProductCard';
+import Product from '../../interfaces/product';
+import Routes from '../../routes';
 
 type Nativation = {
   navigate: (screen: string, params: any) => void;
 };
 
-export function ProductBrandList(): JSX.Element {
+export function ProductList(): JSX.Element {
   const { goBack } = useNavigation();
 
-  const [data, setData] = useState<IBrand[]>([]);
+  const route = useRoute();
+
+  const brand: IBrand = route.params;
+
+  console.log(JSON.stringify(brand) + ' Marca do parametro');
+
+  const [data, setData] = useState<Product[]>([]);
 
   const theme = useTheme();
 
   useEffect(() => {
     console.log('Effect executando product brand');
-    api.get<IBrand[]>('/brands').then(response => {
+    api.get<Product[]>('/brands').then(response => {
       setData(response.data);
     });
   }, []);
@@ -39,7 +45,7 @@ export function ProductBrandList(): JSX.Element {
   useEffect(() => {}, [data]);
 
   return (
-    <DefaultScreen title="Cervejas Geladas">
+    <DefaultScreen>
       <Header>
         <BackButton onPress={goBack}>
           <Feather
@@ -61,12 +67,12 @@ export function ProductBrandList(): JSX.Element {
           </LoadingContainer>
         ) : (
           <>
-            <CategoryText>Cervejas Geladissimas</CategoryText>
+            <CategoryText>{brand?.name}</CategoryText>
             <FlatList
               data={data}
               horizontal={false}
               keyExtractor={item => item.id.toString()}
-              renderItem={({ item }) => <BrandCard brand={item} />}
+              renderItem={({ item }) => <ProductCard product={item} />}
               numColumns={2}
             />
           </>
