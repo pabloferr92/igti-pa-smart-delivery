@@ -21,11 +21,11 @@ export function CheckoutCartButton({
 
   const { cartItems, totalPrice, releaseCart } = useCartContext();
 
-  async function handleGoToCart() {
+  async function handleOrderNow() {
     const order = await api.post('/orders', {
-      user: user?.id,
+      user: user,
       created_at: new Date(),
-      state: 'submited',
+      state: { value: 1, display_value: 'Solicitado' },
       total_price: totalPrice,
     });
 
@@ -47,7 +47,7 @@ export function CheckoutCartButton({
   }
 
   return (
-    <AddToCartButton onPress={() => handleGoToCart()}>
+    <AddToCartButton onPress={() => handleOrderNow()}>
       <AddToCartButtonText>Finalizar compra</AddToCartButtonText>
     </AddToCartButton>
   );

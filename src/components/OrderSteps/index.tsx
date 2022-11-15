@@ -11,13 +11,13 @@ type props = {
 
 export function OrderSteps({ order }: props): JSX.Element {
   const handleActiveStep = (order: IOrder) => {
-    if (order.state == 'submited') return 0;
+    if (order.state.value == '1') return 0;
 
-    if (order.state == 'separacao') return 1;
+    if (order.state.value == '2') return 1;
 
-    if (order.state == 'encaminhado') return 2;
+    if (order.state.value == '3') return 2;
 
-    if (order.state == 'concluido') return 3;
+    if (order.state.value == '4') return 3;
   };
 
   return (
@@ -26,7 +26,7 @@ export function OrderSteps({ order }: props): JSX.Element {
         <ProgressStep
           nextBtnDisabled={true}
           removeBtnRow={true}
-          label="Recebido"
+          label="Solicitado"
         >
           <View style={{ alignItems: 'center' }}></View>
         </ProgressStep>

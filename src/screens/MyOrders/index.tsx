@@ -33,7 +33,7 @@ export function MyOrders(): JSX.Element {
   useEffect(() => {
     setLoaded(false);
     api
-      .get<IOrder[]>(`/orders?user=${user?.id}&_sort=created_at&_order=desc`)
+      .get<IOrder[]>(`/orders?user.id=${user?.id}&_sort=created_at&_order=desc`)
       .then(res => {
         setData(res.data);
         setLoaded(true);
@@ -42,13 +42,6 @@ export function MyOrders(): JSX.Element {
         setLoaded(false);
         Alert('Erro');
       });
-
-    console.log(
-      'Data ' +
-        JSON.stringify(data) +
-        'url ' +
-        `/orders?client=${user?.id}&_sort=created_at&_order=desc`,
-    );
   }, [executeRefresh]);
 
   type Nativation = {

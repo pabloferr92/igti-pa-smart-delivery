@@ -4,6 +4,6 @@ export interface IOrder {
   id: number;
   user: string;
   created_at: Date;
-  state: string;
+  state:  {value : string, display_value : string};
   total_price : number;
 }

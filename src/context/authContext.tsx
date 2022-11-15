@@ -23,7 +23,25 @@ const defaultState = {
 const AuthContext = createContext<AuthContext>(defaultState);
 export const useAuthContext = () => useContext(AuthContext);
 
-const user = { id: 1, name: 'sys admin', email: 'admin@adegas.com.br' };
+// export interface IUSer {
+//   id: number;
+//   login: string;
+//   first_name: string;
+//   last_name: string;
+//   email: string;
+//   address: string;
+//   phone: string;
+// }
+
+const user = {
+  id: 1,
+  name: 'Pablo Ferreira',
+  email: 'admin@adegas.com.br',
+  first_name: 'Pablo',
+  last_name: 'Ferreira',
+  address: 'Rua das cervejas geladas nº 10',
+  phone: '55 (11) 9 1234-5678',
+};
 
 const AuthProvider: FC = ({ children }: any) => {
   const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false);
