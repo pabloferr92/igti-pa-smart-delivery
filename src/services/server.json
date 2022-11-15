@@ -434,6 +434,132 @@
       },
       "total_price": 1.99,
       "id": 39
+    },
+    {
+      "user": {
+        "id": 1,
+        "name": "Pablo Ferreira",
+        "email": "admin@adegas.com.br",
+        "first_name": "Pablo",
+        "last_name": "Ferreira",
+        "address": "Rua das cervejas geladas nº 10",
+        "phone": "55 (11) 9 1234-5678"
+      },
+      "created_at": "2022-11-15T00:40:04.096Z",
+      "state": {
+        "value": 4,
+        "display_value": "Entregue"
+      },
+      "total_price": 17.97,
+      "id": 40
+    },
+    {
+      "user": {
+        "id": 1,
+        "name": "Pablo Ferreira",
+        "email": "admin@adegas.com.br",
+        "first_name": "Pablo",
+        "last_name": "Ferreira",
+        "address": "Rua das cervejas geladas nº 10",
+        "phone": "55 (11) 9 1234-5678"
+      },
+      "created_at": "2022-11-15T02:03:07.193Z",
+      "state": {
+        "value": 4,
+        "display_value": "Entregue"
+      },
+      "total_price": 9.49,
+      "id": 41
+    },
+    {
+      "user": {
+        "id": 1,
+        "name": "Pablo Ferreira",
+        "email": "admin@adegas.com.br",
+        "first_name": "Pablo",
+        "last_name": "Ferreira",
+        "address": "Rua das cervejas geladas nº 10",
+        "phone": "55 (11) 9 1234-5678"
+      },
+      "created_at": "2022-11-15T02:29:46.175Z",
+      "state": {
+        "value": 4,
+        "display_value": "Entregue"
+      },
+      "total_price": 67.47,
+      "id": 42
+    },
+    {
+      "user": {
+        "id": 1,
+        "name": "Pablo Ferreira",
+        "email": "admin@adegas.com.br",
+        "first_name": "Pablo",
+        "last_name": "Ferreira",
+        "address": "Rua das cervejas geladas nº 10",
+        "phone": "55 (11) 9 1234-5678"
+      },
+      "created_at": "2022-11-15T02:42:36.275Z",
+      "state": {
+        "value": 4,
+        "display_value": "Entregue"
+      },
+      "total_price": 45,
+      "id": 43
+    },
+    {
+      "user": {
+        "id": 1,
+        "name": "Pablo Ferreira",
+        "email": "admin@adegas.com.br",
+        "first_name": "Pablo",
+        "last_name": "Ferreira",
+        "address": "Rua das cervejas geladas nº 10",
+        "phone": "55 (11) 9 1234-5678"
+      },
+      "created_at": "2022-11-15T02:49:36.759Z",
+      "state": {
+        "value": 1,
+        "display_value": "Solicitado"
+      },
+      "total_price": 7.5,
+      "id": 44
+    },
+    {
+      "user": {
+        "id": 1,
+        "name": "Pablo Ferreira",
+        "email": "admin@adegas.com.br",
+        "first_name": "Pablo",
+        "last_name": "Ferreira",
+        "address": "Rua das cervejas geladas nº 10",
+        "phone": "55 (11) 9 1234-5678"
+      },
+      "created_at": "2022-11-15T02:51:43.442Z",
+      "state": {
+        "value": 4,
+        "display_value": "Entregue"
+      },
+      "total_price": 54.49,
+      "id": 45
+    },
+    {
+      "user": {
+        "id": 1,
+        "name": "Pablo Ferreira",
+        "email": "admin@adegas.com.br",
+        "first_name": "Pablo",
+        "last_name": "Ferreira",
+        "address": "Rua das cervejas geladas nº 10",
+        "phone": "55 (11) 9 1234-5678"
+      },
+      "created_at": "2022-11-15T02:57:04.958Z",
+      "state": {
+        "value": 1,
+        "display_value": "Solicitado"
+      },
+      "total_price": 7.35,
+      "id": 46
     }
   ],
   "carts": [
@@ -1108,14 +1234,210 @@
       "total_price": 1.99,
       "order": 39,
       "id": 41
+    },
+    {
+      "product": {
+        "id": "1",
+        "description": "Heineken 350ml - tiago",
+        "image": "https://d2r9epyceweg5n.cloudfront.net/stores/001/043/122/products/cerveja-heineken-lata-350-ml1-157b2e5b56d0a3b51c15676907824683-640-0.jpg",
+        "price": "6",
+        "discount": "",
+        "category": "beer",
+        "priceFormated": "R$6,00",
+        "discountFormated": "R$6,00"
+      },
+      "quantity": 2,
+      "total_price": 12,
+      "order": 40,
+      "id": 42
+    },
+    {
+      "product": {
+        "id": "2",
+        "description": "Amster | A cerveja de amsterdam",
+        "image": "https://firebasestorage.googleapis.com/v0/b/delivery-app-e4dc1.appspot.com/o/cervejas%2Famstel.png?alt=media&token=cccef8e1-26dd-4dd2-8f78-93667975aeb5",
+        "price": 1.99,
+        "cold": true,
+        "discount": 0,
+        "category": "beer",
+        "priceFormated": "R$1,99",
+        "discountFormated": "R$1,99"
+      },
+      "quantity": 3,
+      "total_price": 5.97,
+      "order": 40,
+      "id": 43
+    },
+    {
+      "product": {
+        "id": "2",
+        "description": "Amster | A cerveja de amsterdam",
+        "image": "https://firebasestorage.googleapis.com/v0/b/delivery-app-e4dc1.appspot.com/o/cervejas%2Famstel.png?alt=media&token=cccef8e1-26dd-4dd2-8f78-93667975aeb5",
+        "price": 1.99,
+        "cold": true,
+        "discount": 0,
+        "category": "beer",
+        "priceFormated": "R$1,99",
+        "discountFormated": "R$1,99"
+      },
+      "quantity": 1,
+      "total_price": 1.99,
+      "order": 41,
+      "id": 44
+    },
+    {
+      "product": {
+        "id": "1",
+        "description": "Heineken 350ml",
+        "image": "https://d2r9epyceweg5n.cloudfront.net/stores/001/043/122/products/cerveja-heineken-lata-350-ml1-157b2e5b56d0a3b51c15676907824683-640-0.jpg",
+        "price": "7.5",
+        "discount": "",
+        "category": "beer",
+        "priceFormated": "R$7,50",
+        "discountFormated": "R$7,50"
+      },
+      "quantity": 1,
+      "total_price": 7.5,
+      "order": 41,
+      "id": 45
+    },
+    {
+      "product": {
+        "id": "1",
+        "description": "Heineken 350ml",
+        "image": "https://d2r9epyceweg5n.cloudfront.net/stores/001/043/122/products/cerveja-heineken-lata-350-ml1-157b2e5b56d0a3b51c15676907824683-640-0.jpg",
+        "price": "7.5",
+        "discount": "",
+        "category": "beer",
+        "priceFormated": "R$7,50",
+        "discountFormated": "R$7,50"
+      },
+      "quantity": 6,
+      "total_price": 45,
+      "order": 42,
+      "id": 46
+    },
+    {
+      "product": {
+        "id": "3",
+        "description": "Becks | Tenta ser igual a Heineken, mas...",
+        "image": "https://firebasestorage.googleapis.com/v0/b/delivery-app-e4dc1.appspot.com/o/cervejas%2Fbecks.png?alt=media&token=8627663d-9f8c-43a4-b261-1eb6dcc62275",
+        "price": 7.49,
+        "cold": true,
+        "discount": 0,
+        "category": "beer",
+        "priceFormated": "R$7,49",
+        "discountFormated": "R$7,49"
+      },
+      "quantity": 3,
+      "total_price": 22.47,
+      "order": 42,
+      "id": 47
+    },
+    {
+      "product": {
+        "id": "1",
+        "description": "Heineken 350ml",
+        "image": "https://d2r9epyceweg5n.cloudfront.net/stores/001/043/122/products/cerveja-heineken-lata-350-ml1-157b2e5b56d0a3b51c15676907824683-640-0.jpg",
+        "price": "7.5",
+        "discount": "",
+        "category": "beer",
+        "priceFormated": "R$7,50",
+        "discountFormated": "R$7,50"
+      },
+      "quantity": 4,
+      "total_price": 30,
+      "order": 43,
+      "id": 48
+    },
+    {
+      "product": {
+        "id": "7",
+        "description": "Velho barreiro! a melhor cachça do Brasil.",
+        "image": "https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1402.webp",
+        "price": "15",
+        "discount": "",
+        "category": "spirits",
+        "priceFormated": "R$15,00",
+        "discountFormated": "R$15,00"
+      },
+      "quantity": 1,
+      "total_price": 15,
+      "order": 43,
+      "id": 49
+    },
+    {
+      "product": {
+        "id": "1",
+        "description": "Heineken 350ml",
+        "image": "https://d2r9epyceweg5n.cloudfront.net/stores/001/043/122/products/cerveja-heineken-lata-350-ml1-157b2e5b56d0a3b51c15676907824683-640-0.jpg",
+        "price": "7.5",
+        "discount": "",
+        "category": "beer",
+        "priceFormated": "R$7,50",
+        "discountFormated": "R$7,50"
+      },
+      "quantity": 1,
+      "total_price": 7.5,
+      "order": 44,
+      "id": 50
+    },
+    {
+      "product": {
+        "id": "1",
+        "description": "Heineken 350ml",
+        "image": "https://d2r9epyceweg5n.cloudfront.net/stores/001/043/122/products/cerveja-heineken-lata-350-ml1-157b2e5b56d0a3b51c15676907824683-640-0.jpg",
+        "price": "7.5",
+        "discount": "",
+        "category": "beer",
+        "priceFormated": "R$7,50",
+        "discountFormated": "R$7,50"
+      },
+      "quantity": 7,
+      "total_price": 52.5,
+      "order": 45,
+      "id": 51
+    },
+    {
+      "product": {
+        "id": "2",
+        "description": "Amster | A cerveja de amsterdam",
+        "image": "https://firebasestorage.googleapis.com/v0/b/delivery-app-e4dc1.appspot.com/o/cervejas%2Famstel.png?alt=media&token=cccef8e1-26dd-4dd2-8f78-93667975aeb5",
+        "price": 1.99,
+        "discount": "",
+        "category": "beer",
+        "priceFormated": "R$1,99",
+        "discountFormated": "R$1,99"
+      },
+      "quantity": 1,
+      "total_price": 1.99,
+      "order": 45,
+      "id": 52
+    },
+    {
+      "product": {
+        "id": "6",
+        "description": "Pinga 51! bão que só",
+        "image": "https://firebasestorage.googleapis.com/v0/b/delivery-app-e4dc1.appspot.com/o/destilados%2F51.png?alt=media&token=ff2d0b5d-8cf7-43e2-83c9-b358cef7a750",
+        "price": 10.5,
+        "cold": false,
+        "discount": 30,
+        "category": "spirits",
+        "priceFormated": "R$10,50",
+        "discountFormated": "R$7,35"
+      },
+      "quantity": 1,
+      "total_price": 7.35,
+      "order": 46,
+      "id": 53
     }
   ],
   "products": [
     {
       "id": "1",
-      "description": "Heineken 350ml - tiago",
+      "description": "Heineken 350ml",
       "image": "https://d2r9epyceweg5n.cloudfront.net/stores/001/043/122/products/cerveja-heineken-lata-350-ml1-157b2e5b56d0a3b51c15676907824683-640-0.jpg",
-      "price": "6",
+      "price": "7.5",
       "discount": "",
       "category": "beer"
     },
@@ -1124,8 +1446,7 @@
       "description": "Amster | A cerveja de amsterdam",
       "image": "https://firebasestorage.googleapis.com/v0/b/delivery-app-e4dc1.appspot.com/o/cervejas%2Famstel.png?alt=media&token=cccef8e1-26dd-4dd2-8f78-93667975aeb5",
       "price": 1.99,
-      "cold": true,
-      "discount": 0,
+      "discount": "",
       "category": "beer"
     },
     {
@@ -1407,6 +1728,15 @@
       "email": "pablofer@email.com",
       "address": "Rua dos doritos nº 54",
       "phone": "11-955555555"
+    },
+    {
+      "id": 2,
+      "login": "loginteste",
+      "first_name": "Usuario",
+      "last_name": "Sobrenome",
+      "email": "",
+      "address": "",
+      "phone": ""
     }
   ]
 }

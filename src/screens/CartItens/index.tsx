@@ -31,7 +31,6 @@ export function CartItens(): JSX.Element {
     totalPrice,
   } = useCartContext();
 
-  console.log('itens adicionados na sacola' + JSON.stringify(cartItems));
   const theme = useTheme();
 
   const { goBack } = useNavigation();

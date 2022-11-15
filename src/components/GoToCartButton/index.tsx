@@ -12,8 +12,7 @@ export function GoToCartButton({ active = false }: BulletProps): JSX.Element {
   const { navigate } = useNavigation<Nativation>();
 
   function handleGoToCart() {
-    console.log('executando handle go to cart');
-    Alert.alert('Mensagem', 'Alerta');
+    //Alert.alert('Mensagem', 'Alerta');
     navigate('CartItens', {});
   }
 
